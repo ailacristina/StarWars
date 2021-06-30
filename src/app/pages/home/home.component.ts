@@ -28,7 +28,6 @@ export class HomePage implements OnInit {
   }
 
   returnToPlanetsEmitter(){
-    console.log("wtf meo")
     this.urlFilms = null;
     this.planet = null;
   }

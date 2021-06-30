@@ -29,7 +29,6 @@ export class FilmsComponent implements OnInit {
         dataFilms.push(films)
 
         if (index >= this.urlFilms.length - 1) {
-          console.log(dataFilms)
           this.dataSource = dataFilms;
         }
       })

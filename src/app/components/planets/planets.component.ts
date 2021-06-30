@@ -62,10 +62,7 @@ export class PlanetsComponent implements OnInit {
   }
 
   search(value) {
-    console.log(value)
-
     this.starWarsService.search(value).subscribe(planets => {
-      console.log(planets)
 
       this.currPage = (planets["count"] > 0) ? 1 : 0;
       this.maxPages = Math.ceil(planets["count"] / this.qtdPerPage)

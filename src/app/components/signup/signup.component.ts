@@ -28,7 +28,6 @@ export class SignupComponent implements OnInit {
 
     this.f.username.valueChanges.pipe(debounceTime(1000)).subscribe(res => {
       this.authService.checkUsername(res).subscribe(response => {
-        console.log(response)
 
         if (response.status === "success") {
           this.errorUsername = null;

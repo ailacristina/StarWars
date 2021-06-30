@@ -21,7 +21,7 @@ export class AuthService {
   private currUserSubject = new BehaviorSubject<User>(undefined);
   currUser = this.currUserSubject.asObservable();
 
-  private usersSubject = new BehaviorSubject<User[]>([{ name: "Luke", lastName: "Skywalker", username: "luke", password: "luke" }]);
+  private usersSubject = new BehaviorSubject<User[]>([{ name: "Luke", lastName: "Skywalker", username: "Luke", password: "skywalker" }]);
   users = this.usersSubject.asObservable();
 
   constructor(private httpClient: HttpClient) { }
