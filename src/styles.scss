@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: #03051b;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ @import './assets/css/transparent/app.min.css';
+ @import './assets/css/transparent/theme/black.min.css';
+
+.card{
+   background-color: rgb(3 48 80 / 25%) !important;
+}

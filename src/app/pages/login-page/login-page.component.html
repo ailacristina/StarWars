@@ -1,0 +1,13 @@
+<div class="row h-100">
+    <div class="col-5 bg-wars">
+
+    </div>
+
+    <div  class="col-7  d-flex align-items-center justify-content-center">
+
+        <div class="w-50">
+            <app-login *ngIf="isLogin"></app-login>
+            <app-signup *ngIf="!isLogin"></app-signup>
+        </div>
+    </div>
+</div>

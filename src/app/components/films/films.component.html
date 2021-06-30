@@ -1,0 +1,43 @@
+<h1 align="center" class="mb-5">Films in {{planet}}</h1>
+
+
+<div class="text-center m-40" *ngIf="!dataSource">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<h4 *ngIf="dataSource && dataSource.length === 0">There are no films in this planet!</h4>
+
+
+<div class="d-flex align-items-end flex-column bd-highlight mb-3 h-content">
+  <div class="p-2 bd-highlight">
+    <div class="card mx-5 my-3" *ngFor="let film of dataSource">
+      <div class="card-body">
+        <div class="row">
+          <div class="col mb-3">Title</div>
+          <div class="col-7 mb-3">Opening crawl</div>
+          <div class="col mb-3">Director</div>
+          <div class="col mb-3">Producer</div>
+          <div class="col mb-3">Release</div>
+
+
+          <div class="w-100"></div>
+          <div class="col">{{film.title}}</div>
+          <div class="col-7">{{film.opening_crawl}}</div>
+          <div class="col">{{film.director}}</div>
+          <div class="col">{{film.producer}}</div>
+          <div class="col">{{film.release_date | date}}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="mt-auto p-2 bd-highlight">
+
+    <div *ngIf="urlFilms" class="mr-5"><button class="btn btn-outline-info"
+        (click)="returnToPlanets()">Return</button>
+    </div>
+
+  </div>
+</div>

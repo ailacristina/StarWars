@@ -1,0 +1,10 @@
+<div align="right" class="mx-5 mt-5"> <button class="btn btn-outline-info" (click)="logout()">Log out</button></div>
+
+
+<div class="d-flex justify-content-center h-100">
+    <app-planets *ngIf="!urlFilms" (goToFilmEvent)="goToFilm($event.urls, $event.name)"></app-planets>
+    <app-films *ngIf="urlFilms" [urlFilms]="urlFilms" [planet]="planet" (returnToPlanetsEmitter)="returnToPlanetsEmitter()">
+
+    </app-films>
+</div>
+

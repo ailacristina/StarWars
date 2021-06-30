@@ -1,0 +1,7 @@
+{
+    "demo": {
+        "title": "Demo Traduzione",
+        "text": "semplice dimostrazione di traduzione automatica",
+        "greeting": "Ciao {{name}}!"
+    }
+}
